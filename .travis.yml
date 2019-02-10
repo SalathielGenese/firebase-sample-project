@@ -1,8 +1,16 @@
 language: node_js
 node_js:
-  - node
+- node
+- 8
+branches:
+  only:
+  - master
 script:
-  -
+  - cd functions
+  - npm install
+  - npm run lint
+  # - npm run test
+  - cd ..
 deploy:
   provider: firebase
   token:
