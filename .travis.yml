@@ -9,9 +9,10 @@ script:
   - npm install
   - npm run lint
   # - npm run test
-  - yarn global add firebase-tools
   - cd ..
-  - firebase use --add ${FIREBASE_PROJECT}
+  # - yarn global add firebase-tools
+  # - firebase use --add ${FIREBASE_PROJECT}
+  # - firebase deploy --token ${FIREBASE_TOKEN}
 deploy:
   provider: firebase
   token:
