@@ -7,7 +7,7 @@ import * as cors from 'cors';
 const app = express();
 
 app.use( cors({ origin: true }) );
-app.use( ( request, response ) => {
+app.all( '*', ( request, response ) => {
     response.json({ ...request.body, timestamp: Date.now() });
 });
 
