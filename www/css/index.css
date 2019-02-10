@@ -18,3 +18,8 @@
 #contact-form > label:not(:first-child) {
     margin-top: .75em;
 }
+
+#contact-form > label > textarea {
+    resize: vertical;
+    min-height: 120px;
+}
