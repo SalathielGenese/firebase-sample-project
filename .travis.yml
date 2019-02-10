@@ -7,13 +7,10 @@ branches:
 script:
   - cd functions
   - npm install
-  - npm run lint
-  # - npm run test
   - cd ..
-  # - yarn global add firebase-tools
-  # - firebase use --add ${FIREBASE_PROJECT}
-  # - firebase deploy --token ${FIREBASE_TOKEN}
-deploy:
-  provider: firebase
-  token:
-    secure: ${TRAVIS_FIREBASE_TOKEN}
+  - yarn global add firebase-tools
+  - firebase deploy --token ${FIREBASE_TOKEN} --project ${FIREBASE_PROJECT}
+# deploy:
+#   provider: firebase
+#   token:
+#     secure: ${TRAVIS_FIREBASE_TOKEN}
