@@ -16,6 +16,45 @@
     <script defer src="/__/firebase/init.js"></script>
   </head>
   <body>
+      <main>
+          <section>
+              <article>
+                  <header>
+                      <h1>
+                          Contact Form
+                      </h1>
+                  </header>
+                  <form method="post" id="contact-form">
+                    <label>
+                      <span>
+                        Email
+                      </span>
+                      <input
+                        required
+                        type="email"
+                        name="recipient"
+                        autocomplete="off">
+                    </label>
+                    <label>
+                      <span>
+                        Subject
+                      </span>
+                      <input
+                        required
+                        type="text"
+                        name="subject"
+                        autocomplete="off">
+                    </label>
+                    <label>
+                      <textarea
+                        required
+                        name="content"
+                        autocomplete="off"></textarea>
+                    </label>
+                  </form>
+              </article>
+          </section>
+      </main>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
