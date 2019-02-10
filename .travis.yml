@@ -10,7 +10,3 @@ script:
   - cd ..
   - yarn global add firebase-tools
   - firebase deploy --token ${FIREBASE_TOKEN} --project ${FIREBASE_PROJECT}
-# deploy:
-#   provider: firebase
-#   token:
-#     secure: ${TRAVIS_FIREBASE_TOKEN}
