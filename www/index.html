@@ -75,6 +75,14 @@
           let app = firebase.app();
           let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
           // document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+          document.querySelector( 'form#contact-form' ).addEventListener( 'submit', $event => {
+            let formData = [ ...document.querySelectorAll( '#contact-form [name]' ) ].reduce( ( ( stack, widget ) =>
+              Object.assign( stack, { [ widget.getAttribute( 'name' ) ]: widget.value }) ), {});
+
+            $event.preventDefault();
+            // TODO: submit form
+            console.log( formData );
+          })
         } catch (e) {
           console.error(e);
           document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
