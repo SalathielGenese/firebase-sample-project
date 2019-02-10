@@ -5,8 +5,8 @@ branches:
   only:
   - master
 script:
-  - cd functions
-  - npm install
-  - cd ..
-  - yarn global add firebase-tools
-  - firebase deploy --token ${FIREBASE_TOKEN} --project ${FIREBASE_PROJECT}
+- yarn global add firebase-tools
+- cd functions
+- npm install
+- cd ..
+- firebase deploy --token ${FIREBASE_TOKEN} --project ${FIREBASE_PROJECT}
